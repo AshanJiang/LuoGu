@@ -30,7 +30,6 @@ int main()
 	}
 	int i = 1, deleteNum = 0;
 	long long res = 0;
-	int tmp;
 	while (true)
 	{
 		if (deleteNum == n)
@@ -46,6 +45,8 @@ int main()
 			for (size_t j = 0; j < graph[i].size(); j++)
 			{
 				dp[graph[i][j]] += dp[i];
+				//可能会爆掉，在这需要取模
+				dp[graph[i][j]] %= MOD_NUM;
 				//删边
 				inDegree[graph[i][j]] -= 1;
 			}
