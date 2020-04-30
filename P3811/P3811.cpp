@@ -17,7 +17,7 @@ ll binPow(ll a, ll b)
 	return res;
 }
 
-//乘法逆元，费马小定理
+//乘法逆元，费马小定理，返回a在模p下的逆元
 //不能直接先算幂再取模，否则会溢出，需要每一步都取模
 ll inverseElement(ll a, ll p, ll mod)
 {
